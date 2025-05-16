@@ -7,26 +7,24 @@ import interfaces.Solvable
  *
  *
  *
- *     *
- *    ***
- *   *****
- *  *******
  * *********
- *
+ *  *******
+ *   *****
+ *    ***
+ *     *
  *
  */
 
-class Pattern7:Solvable {
+class Pattern8:Solvable {
     override fun solve(n: Int) {
-        (n-1 downTo 0).forEach{
+        repeat(5) {
             print(" ".repeat(it))
             val i = 2*(n - it) - 1
             print("*".repeat(i))
             print(" ".repeat(it))
-
             println()
         }
     }
 }
 
-fun main() = Pattern7().solve(5)
+fun main() = Pattern8().solve(5)
