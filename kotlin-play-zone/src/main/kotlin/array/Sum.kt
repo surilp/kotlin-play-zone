@@ -3,8 +3,8 @@ package `kotlin-play-zone`.src.main.kotlin.array
 fun sum(arr: List<Int>, n: Int): Int {
     var result = 0
 
-    arr.forEach {
-        result += it
+    for(index in 0 until n) {
+        result += arr[index]
     }
 
     return result
