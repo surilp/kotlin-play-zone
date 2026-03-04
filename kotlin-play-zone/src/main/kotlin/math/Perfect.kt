@@ -1,11 +1,17 @@
 package `kotlin-play-zone`.src.main.kotlin.math
 
-fun isPerfect(n: Int): Boolean{
-    var result = 0
+import kotlin.math.sqrt
 
-    for (num in n-1 downTo 1 ){
+fun isPerfect(n: Int): Boolean{
+    var result = 1
+
+    for (num in 2 ..sqrt(n.toDouble()).toInt()){
         if (n % num == 0) {
             result += num
+            val divisionResult = n / num
+            if (divisionResult != num) {
+                result += n / num
+            }
         }
     }
 
@@ -13,7 +19,7 @@ fun isPerfect(n: Int): Boolean{
 }
 
 fun main() {
-    val input = listOf(6, 4, 28)
+    val input = listOf(6, 4, 28, 36)
     input.forEach {
         println("For input $it, result is ${isPerfect(it)}")
     }
