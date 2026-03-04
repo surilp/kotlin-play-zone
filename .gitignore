@@ -1,0 +1,9 @@
+# IntelliJ IDEA
+.idea/
+
+# Compiled output
+out/
+
+# Kotlin / Gradle build folders (optional but recommended)
+build/
+*.iml
