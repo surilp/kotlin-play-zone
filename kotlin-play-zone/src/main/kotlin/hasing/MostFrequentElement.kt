@@ -7,6 +7,8 @@ fun mostFrequentElement(nums: IntArray): Int {
         hashMap[num] = hashMap.getOrDefault(num, 0) + 1
         if (result.second < hashMap[num]!!) {
             result = Pair(num, hashMap[num]!!)
+        } else if(result.second == hashMap[num]!!) {
+            result = Pair(minOf(num, result.first), result.second)
         }
     }
 
@@ -19,4 +21,7 @@ fun main() {
 
     val input1 = intArrayOf(4,4,5,5,6)
     println("For input ${input1.contentToString()}, result is ${mostFrequentElement(input1)}")
+
+    val input2 = intArrayOf(10,9,7)
+    println("For input ${input2.contentToString()}, result is ${mostFrequentElement(input2)}")
 }
