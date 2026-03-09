@@ -3,7 +3,7 @@ package `kotlin-play-zone`.src.main.kotlin.sorting
 fun selectionSort(nums: IntArray): IntArray {
     val n = nums.size
 
-    for (i in 0 until n) {
+    for (i in 0 until n-1) {
         var minIndex = i
         for (j in i + 1 until n) {
             if (nums[minIndex] > nums[j]) {
