@@ -8,7 +8,7 @@ fun findMaxConsecutiveOnes(nums: IntArray): Int {
         if (num == 1) {
             temp++
         } else {
-            result = temp
+            result = maxOf(temp, result)
             temp = 0
         }
     }
