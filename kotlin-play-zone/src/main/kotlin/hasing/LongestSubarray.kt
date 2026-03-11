@@ -66,6 +66,8 @@ fun main() {
         Pair(intArrayOf(-3, 2, 1), 6),
         Pair(intArrayOf(-1, 1, 1), 1),
         Pair(intArrayOf(2, 0, 0, 3), 3),
+        Pair(intArrayOf(1, 2, 3, 1, 1, 1, 1, 3, 3), 6),
+        Pair(intArrayOf(1, 2, 3, -3, 1, 1, 1, 4, 2, -3), 3),
     )
 
     input.forEach {
