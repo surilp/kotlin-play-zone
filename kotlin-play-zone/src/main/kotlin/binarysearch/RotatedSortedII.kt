@@ -12,10 +12,9 @@ fun rotatedSortedArrayII(nums: IntArray, k: Int): Boolean {
 
         if (k == midNum) {
             return true
-        } else if (midNum == nums[end]) {
-            end = mid - 1
-        } else if (midNum == nums[start]) {
-            start = mid + 1
+        } else if (midNum == nums[end] && midNum == nums[start]) {
+            end -= 1
+            start += 1
         } else if (nums[start] <= midNum) {
             if (nums[start] <= k && k <= midNum) {
                 end = mid - 1
