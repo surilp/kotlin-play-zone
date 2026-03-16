@@ -3,7 +3,7 @@ package `kotlin-play-zone`.src.main.kotlin.recursion
 fun countSubSequenceWithTargetSum(nums: IntArray, k: Int): Int {
     val n = nums.size
 
-    fun helper(nums: IntArray, k:Int, n: Int, current: Int, sum: Int): Int {
+    fun helper(nums: IntArray, k: Int, n: Int, current: Int, sum: Int): Int {
         if (sum > k) {
             return 0
         }
@@ -17,7 +17,7 @@ fun countSubSequenceWithTargetSum(nums: IntArray, k: Int): Int {
 
         var result = 0
         result += helper(nums, k, n, current + 1, sum + nums[current])
-        result += helper(nums, k , n, current + 1, sum)
+        result += helper(nums, k, n, current + 1, sum)
 
         return result
     }
