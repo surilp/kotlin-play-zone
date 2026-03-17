@@ -1,8 +1,12 @@
 package `kotlin-play-zone`.src.main.kotlin.linkedlist
 
 fun deleteKthElement(head: Node<Int>?, k: Int): Node<Int>? {
-    if (head == null || head.next == null) {
+    if (head == null) {
         return null
+    }
+
+    if (k == 1) {
+        return head.next
     }
 
     var current: Node<Int>? = head
@@ -31,7 +35,7 @@ fun main() {
     head1.next?.next = Node(3)
     head1.next?.next?.next = Node(1)
     head1.next?.next?.next?.next = Node(0)
-    println(traversal(deleteKthElement(head1, 10)!!)) // [5, 4, 3, 1, 0]
+    println(traversal(deleteKthElement(head1, 1)!!)) // [5, 4, 3, 1, 0]
 
     // Example 2: [1]
     val head2 = Node(1)
