@@ -1,6 +1,6 @@
 package `kotlin-play-zone`.src.main.kotlin.linkedlist
 
-class Node<T>(val value:T, var next: Node<T>? = null ) {
+data class Node<T>(val value:T, var next: Node<T>? = null ) {
 }
 
 fun <T> Node<T>.print() {
