@@ -11,7 +11,7 @@ fun main() {
     head1.next?.next = Node(3)
     head1.next?.next?.next = Node(1)
     head1.next?.next?.next?.next = Node(0)
-    println(deleteHead(head1)) // [5, 4, 3, 1, 0]
+    println(traversal(deleteHead(head1)!!)) // [5, 4, 3, 1, 0]
 
     // Example 2: [1]
     val head2 = Node(1)
