@@ -19,6 +19,38 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
     return result
 }
 
+fun iterative(root: TreeNode?): List<Int> {
+    val stack = ArrayDeque<NodeState>()
+    val result = mutableListOf<Int>()
+    if (root == null) {
+        return emptyList()
+    }
+
+    stack.addLast(NodeState(root, false))
+
+    while(stack.isNotEmpty()) {
+        val nodeState = stack.last()
+        val node = nodeState.node
+        val visited = nodeState.visited
+        if (visited) {
+            result.add(node.value!!)
+            stack.removeLast()
+            node.right?.let {
+                stack.addLast(NodeState(node.right!!, false))
+            }
+        } else {
+            nodeState.visited = true
+            node.left?.let {
+                stack.addLast(NodeState(node.left!!, false))
+            }
+        }
+    }
+
+    return result
+}
+
+data class NodeState(val node: TreeNode, var visited: Boolean)
+
 fun main() {
     val input = listOf(
         buildTree(arrayOf(1,null,2,3)),
@@ -27,6 +59,6 @@ fun main() {
     )
 
     input.forEach{
-        println(inorderTraversal(it))
+        println(iterative(it))
     }
 }
