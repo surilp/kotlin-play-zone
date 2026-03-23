@@ -19,7 +19,7 @@ fun inorderTraversal(root: TreeNode?): List<Int> {
     return result
 }
 
-fun iterative(root: TreeNode?): List<Int> {
+fun iterativeInorder(root: TreeNode?): List<Int> {
     val stack = ArrayDeque<NodeState>()
     val result = mutableListOf<Int>()
     if (root == null) {
@@ -59,6 +59,6 @@ fun main() {
     )
 
     input.forEach{
-        println(iterative(it))
+        println(iterativeInorder(it))
     }
 }
