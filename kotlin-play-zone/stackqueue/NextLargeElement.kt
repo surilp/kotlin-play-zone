@@ -6,7 +6,7 @@ fun nextLargeElement(arr: IntArray): IntArray {
     var i = arr.size - 1
 
     while (i >= 0) {
-        while (stack.isNotEmpty() && stack.last() < arr[i]) {
+        while (stack.isNotEmpty() && stack.last() <= arr[i]) {
             stack.removeLast()
         }
 
