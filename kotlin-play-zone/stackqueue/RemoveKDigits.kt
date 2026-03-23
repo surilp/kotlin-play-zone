@@ -29,6 +29,7 @@ fun main() {
         Pair("541892", 2),
         Pair("1002991", 3),
         Pair("10", 2),
+        Pair("1432219", 3),
     )
 
     input.forEach {
