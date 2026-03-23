@@ -1,4 +1,4 @@
-package `kotlin-play-zone`.stackqueue
+package `kotlin-play-zone`.src.main.kotlin.stackqueue
 
 fun sumSubarrayMins(arr: IntArray): Int {
     val smallNext = smallNumberNext(arr)

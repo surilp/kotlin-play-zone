@@ -1,4 +1,4 @@
-package `kotlin-play-zone`.stackqueue
+package `kotlin-play-zone`.src.main.kotlin.stackqueue
 
 fun removeKDigits(nums: String, k: Int): String {
     val stack = ArrayDeque<Int>()

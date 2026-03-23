@@ -1,4 +1,4 @@
-package `kotlin-play-zone`.stackqueue
+package `kotlin-play-zone`.src.main.kotlin.stackqueue
 
 class QueueWithStack {
     var stack1 = ArrayDeque<Int>()

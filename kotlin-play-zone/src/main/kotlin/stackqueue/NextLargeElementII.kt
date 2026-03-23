@@ -1,4 +1,4 @@
-package `kotlin-play-zone`.stackqueue
+package `kotlin-play-zone`.src.main.kotlin.stackqueue
 
 fun nextLargeElementII(arr: IntArray): IntArray {
     val n = arr.size

@@ -1,4 +1,4 @@
-package `kotlin-play-zone`.stackqueue
+package `kotlin-play-zone`.src.main.kotlin.stackqueue
 
 fun nextLargeElement(arr: IntArray): IntArray {
     val stack = ArrayDeque<Int>()
