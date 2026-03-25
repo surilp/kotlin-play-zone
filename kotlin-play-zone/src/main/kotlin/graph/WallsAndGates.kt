@@ -9,7 +9,7 @@ fun shortestDistance(matrix: Array<CharArray>, rowI: Int, colI: Int): Pair<Pair<
     var minDistance = Int.MAX_VALUE
     var target = Pair(-1, -1)
     fun helper(rowS: Int, colS: Int, distance: Int, firstBlock: Boolean = false) {
-        if (rowS < 0 || rowS >= rSize || colS < 0 || colS >= cSize || distance >= minDistance) {
+        if (rowS < 0 || rowS >= rSize || colS < 0 || colS >= cSize || distance >= minDistance || visited[rowS][colS] == 1) {
             return
         }
         if (matrix[rowS][colS] == 'X' && !firstBlock) {
@@ -35,7 +35,6 @@ fun shortestDistance(matrix: Array<CharArray>, rowI: Int, colI: Int): Pair<Pair<
     helper(rowI, colI, 0, true)
 
     return if (minDistance == Int.MAX_VALUE) {
-        Pair(target,-1)
         Pair(target,-1)
     } else {
         Pair(target,minDistance)
